@@ -1,0 +1,11 @@
+PC=gpc
+PCFLAGS=-Os -g --borland-pascal
+PROGRAM=neted
+
+all: $(PROGRAM)
+
+$(PROGRAM): neted.pas
+	$(PC) $(PCFLAGS) -o $@ --automake $<
+
+clean:
+	$(RM) $(PROGRAM) *.gpi *.o
